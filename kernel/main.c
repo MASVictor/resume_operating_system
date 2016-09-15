@@ -6,11 +6,11 @@ void buildFrame();
 void civil();
 void interests();
 void education();
+void cprint();
 
 void kernel_start(unsigned long magic, unsigned long addr) {
 	cls();
-	chg_color(BG_WHITE |CYAN);
-	print("Mon OS\n");
+	cprint("Mon OS\n");
 	chg_color(BG_WHITE | BLACK);
 	firstPart();
 	getScancode();
@@ -19,3 +19,8 @@ void kernel_start(unsigned long magic, unsigned long addr) {
 }
 
 
+void cprint( char * msj )
+{
+	chg_color( BG_WHITE | CYAN );
+	print(msj);
+}
