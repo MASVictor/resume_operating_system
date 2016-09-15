@@ -30,7 +30,7 @@ static int x, y = 0;
 void cls(){
 
 	long i;
-	
+
 	for(i=0;i<width*lines;++i){
 	    (*screen)[i].c=0;
 	    (*screen)[i].attr=aff;
@@ -48,59 +48,134 @@ void printchar(char c){
 }
 
 //
-// move_to_next_char : move current position to 
+// move_to_next_char : move current position to
 // next char
 //------------------------------------------------
-void move_to_next_char(){
-
-   if(++x == width){
-      move_to_next_line();
-   }   
-
+void move_to_next_char()
+{
+    if(++x == width)
+    {
+        move_to_next_line();
+    }
 }
+
 //
-// move_to_next_line : move current position to 
+// move_to_next_line : move current position to
 // next line
 //------------------------------------------------
-void move_to_next_line(){
-      x=0;
-      if(++y == lines){
+void move_to_next_line()
+{
+    x = 0;
+
+    if(++y == lines)
+    {
         long i;
-	// Copy the screen one line before
-      	for(i=0;i<width*(lines-1);++i){
-	    (*screen)[i].c=(*screen)[i+width].c;
-	    (*screen)[i].attr=(*screen)[i+width].attr;
-	}
-	// Empty last line
-	for(;i<width*lines;++i){
-	    (*screen)[i].c=0;
-	    (*screen)[i].attr=aff;
-	}
-      }
+
+        // Copy the screen one line before
+
+        for(i=0; i<width*(lines-1); ++i)
+        {
+	        (*screen)[i].c    = (*screen)[i+width].c;
+	        (*screen)[i].attr = (*screen)[i+width].attr;
+	    }
+
+        // Empty last line
+	    for(; i<width*lines; ++i)
+        {
+	        (*screen)[i].c    = 0;
+	        (*screen)[i].attr = aff;
+	    }
+    }
+}
+
+/*
+ * Moves n characters forward. It also considers
+ * the starting column not to start next line at
+ * column 0.
+ */
+
+void move_n_chars( int n, int c )
+{
+    int i = 0;
+
+    for ( i = 0; i < n; i++ )
+    {
+        if ( ++x == width )
+        {
+            move_to_next_line();
+            x = c;
+
+            return;
+        }
+    }
+}
+
+/*
+ * print_at: prints something starting at (l,c)
+ * and starts next lines at column c instead of 0
+ * l: line, c: column
+ */
+
+void print_at( char* str, int l, int c )
+{
+    x = c;
+    y = l;
+
+    char *pt = str;
+
+    while ( *pt != 0x0 )
+    {
+        if ( *pt == '\n' )
+        {
+            move_to_next_line();
+            x = c;
+        }
+        else if ( *pt == '\t' )
+        {
+            move_n_chars( 4, c );
+        }
+        else
+        {
+            printchar( *pt );
+            move_n_chars( 1, c );
+        }
+    }
 }
 
 //
 // Print
 //------------------------------------------------
-void print(char* str){
-	char* pt;
-	pt = str;
-	while(*pt!=0x0){
-	        if(*pt == '\n'){
-		   	move_to_next_line();   
-		}else if (*pt == '\t'){  
-			move_to_next_char();
-			move_to_next_char();
-			move_to_next_char();
-			move_to_next_char();
-			move_to_next_char();
-		}else if (*pt == '\r'){
-			x=0;
-		}else{
-			printchar(*pt);
-			move_to_next_char();
-		}		
-		pt++;
+void print(char* str)
+{
+    char* pt;
+
+    pt = str;
+
+    while(*pt != 0x0)
+    {
+	    if(*pt == '\n')
+        {
+		    move_to_next_line();
+        }
+        else if (*pt == '\t')
+        {
+            move_to_next_char();
+            move_to_next_char();
+            move_to_next_char();
+            move_to_next_char();
+            move_to_next_char();
+        }
+        else if (*pt == '\r')
+        {
+            x = 0;
+        }
+        else
+        {
+            printchar(*pt);
+            move_to_next_char();
+        }
+
+        pt++;
 	}
 }
 //
