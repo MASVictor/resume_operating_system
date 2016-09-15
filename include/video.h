@@ -25,5 +25,7 @@ void iprint(int number);
 void move_to_next_char();
 void move_to_next_line();
 void locate(int h, int w);
+void print_at( char* str, int l, int c );
+void print_n_chars( int n, int c );
 #endif
 
