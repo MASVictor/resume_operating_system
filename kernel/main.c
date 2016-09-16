@@ -11,6 +11,7 @@ void cprint();
 void kernel_start(unsigned long magic, unsigned long addr) {
 	cls();
 	cprint("Mon OS\n");
+        print_at( "Trying to print at (2, 2)\n", 2, 2 );
 	chg_color(BG_WHITE | BLACK);
 	firstPart();
 	getScancode();
