@@ -51,14 +51,14 @@ void buildFrame(){
 void civil() {
 	locate(3,1);
 	chg_color(BG_WHITE |CYAN);
-	print("Mathieu PASSENAUD\n");
+	print("Embedded Linux Git-Team\n");
 	chg_color(BG_WHITE | BLACK );
 	locate(3,2);
-	print("27 years\n");
+	print("~2X Years\n");
 	locate(3,3);
-	print("mathieu.passenaud@gmail.com\n");
+	print("mvictr619@live.com.mx\n");
 	locate(3,4);
-	print("driving licence, single\n");
+	print("Just changing some lines\n");
 }
 
 
