@@ -72,7 +72,7 @@ void education() {
 	print("Engineer \"software engineering\"");
 	locate(12, 9);
 	chg_color(BG_WHITE | GRAY);
-	print("(in progress) - CNAM");
+	print("(in progress) - UNAM");
 
 	chg_color(BG_WHITE | BLACK);	
 	locate(3, 11);
@@ -90,14 +90,14 @@ void education() {
 
 	locate(5, 17);
 	chg_color(BG_WHITE | RED);
-	print("INTERNSHIPS");
+	print("TEAM MEMBERS");
 	
 	chg_color(BG_WHITE | BLACK);
 	locate(3, 18);
-	print("\"Build a storage (flash NAND) on our products\"");
+	print("\"Mauricio Quijada, Victor Garcia, Victor Mtz, Ricardo Balderas\"");
 	locate(12, 19);
 	chg_color(BG_WHITE | GRAY);
-	print("(2010 - 4 months) Leroy Automation (31) ");
+	print("(2016 - 6 months) Intel Laboratory");
 
 	chg_color(BG_WHITE | BLACK);
 	locate(3, 21);
