@@ -140,26 +140,26 @@ void experiences() {
 	locate(0,2);
 	chg_color(BG_WHITE | BLACK);
 	print("This is our fist project, but we fell so tired because we drank some tequilas \n\
-    You can find our code and documentation at : https://github.com/MASVictor/resume_operating_system.git\n");
+    You can find our code and documentation at :\n https://github.com/MASVictor/resume_operating_system.git\n");
 	chg_color(BG_GRAY | BLACK);
 	print("Java - Jersey - Appengine - Bash - Chef - JQuery - JMeter - GCE - OpenStack");
 
 	locate(0,9);
 	chg_color(BG_RED | WHITE);
-	print("Mauricio Quijada Jiménez");
+	print("Mauricio Quijada Jimenez");
 	locate(0,10);
 	chg_color(BG_WHITE | GRAY);
 	print("-------- 2016 --------");
 	locate(0,11);
 	chg_color(BG_WHITE | BLACK);
-	print("student \n\
-A SaaS Service with internal servers, \n\
-no loadbalancing, no scripts, root on \n\
-servers, no HA...\n\
-My work was to build things around that\n\
-to insure a quality service.\n");
+	print("Engineering student \n\
+     \n\
+Hello World! \n\
+Homework\n\
+another line\n\
+just changing more lines\n");
 	chg_color(BG_GRAY | BLACK);
-	print ("Java - bash - tomcat - Mysql - Apache");
+	print ("Java - bash - Mauricio - Mysql - Apache");
 
 	locate(40,9);
 	chg_color(BG_RED | WHITE);
