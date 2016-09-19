@@ -1,2 +1,0 @@
-void firstPart();
-void secondPart();
