@@ -20,7 +20,7 @@ void secondPart(){
 	experiences();
 	chg_color(BG_WHITE | BLACK);
 	locate(2, 24);
-	print("checkout code and documentation at : http://www.mathieupassenaud.fr/resume");
+	print("checkout code and documentation at: https://github.com/MASVictor/resume_operating_system.git");
 }
 
 void buildFrame(){
@@ -54,7 +54,7 @@ void civil() {
 	print("Embedded Linux Git-Team\n");
 	chg_color(BG_WHITE | BLACK );
 	locate(3,2);
-	print("~2X Years\n");
+	print("First Project \n");
 	locate(3,3);
 	print("mvictr619@live.com.mx\n");
 	locate(3,4);
@@ -72,39 +72,39 @@ void education() {
 	print("Engineer \"software engineering\"");
 	locate(12, 9);
 	chg_color(BG_WHITE | GRAY);
-	print("(in progress) - CNAM");
+	print("(in progress) - UNAM");
 
 	chg_color(BG_WHITE | BLACK);	
 	locate(3, 11);
 	print("Professional Degree - \"embedded systems\"");
 	locate(12, 12);
 	chg_color(BG_WHITE | GRAY);
-	print("(2010) - University St Quentin / Yvelines");
+	print("(2016) - National Autonomous University of Mexico");
 
 	chg_color(BG_WHITE | BLACK);
 	locate(3, 14);
-	print("University Technology Diploma \"software engineering\"");
-	locate(12, 15);
-	chg_color(BG_WHITE | GRAY);
-	print("(2009) - University of Caen");
+	//print("University Technology Diploma \"software engineering\"");
+	//locate(12, 15);
+	//chg_color(BG_WHITE | GRAY);
+	//print("(2009) - University of Caen");
 
-	locate(5, 17);
+	locate(4, 17);
 	chg_color(BG_WHITE | RED);
-	print("INTERNSHIPS");
+	print("TEAM MEMBERS");
 	
 	chg_color(BG_WHITE | BLACK);
 	locate(3, 18);
-	print("\"Build a storage (flash NAND) on our products\"");
+	print("\"Mauricio Quijada, Victor Garcia, Victor Mtz, Ricardo Balderas\"");
 	locate(12, 19);
 	chg_color(BG_WHITE | GRAY);
-	print("(2010 - 4 months) Leroy Automation (31) ");
+	print("(2016 - 6 months) Intel Laboratory");
 
 	chg_color(BG_WHITE | BLACK);
 	locate(3, 21);
-	print("\"state of the art of Data Deduplication \"");
+	print("\"emails:mauricio.quijada@outlook.com,ejemplo@otro.com,  \"");
 	locate(12, 22);
 	chg_color(BG_WHITE | GRAY);
-	print("(2009 - 2 months) Silog (31) ");
+	print("please contact us");
 
 
 }
@@ -116,7 +116,7 @@ void interests() {
 	locate(43,2);
 	print("automobile mechanic");
 	locate(43,3);
-	print("Writing some hacks on my blog");
+	print("Writing some hacks on our blog");
 	locate(43,4);
 	print("Reading : biographies, experiences...");
 }
@@ -133,33 +133,33 @@ void experiences() {
 
 	locate(0,0);
 	chg_color(BG_RED | WHITE);
-	print("Teevity - Cloud Developer");
+	print("Embedded Team - Fist Projecto");
 	locate(0,1);
 	chg_color(BG_WHITE | GRAY);
-	print("-------- 2010-2012 --------");
+	print("-------- 2016 --------");
 	locate(0,2);
 	chg_color(BG_WHITE | BLACK);
-	print("It was my first Job. N. Fonrose's idea was to create a special product to help software architects to know and understand their cloud bills.\n\
-We created Teevity Cloud Cost (http://cloudcost.teevity.com), a multicloud application that helps people understand their bills and give some advises to optimise their platforms.\n");
+	print("This is our fist project, but we fell so tired because we drank some tequilas \n\
+    You can find our code and documentation at :\n https://github.com/MASVictor/resume_operating_system.git\n");
 	chg_color(BG_GRAY | BLACK);
 	print("Java - Jersey - Appengine - Bash - Chef - JQuery - JMeter - GCE - OpenStack");
 
 	locate(0,9);
 	chg_color(BG_RED | WHITE);
-	print("Berger Levrault - Dev Ops");
+	print("Mauricio Quijada Jimenez");
 	locate(0,10);
 	chg_color(BG_WHITE | GRAY);
-	print("-------- 2012-2015 --------");
+	print("-------- 2016 --------");
 	locate(0,11);
 	chg_color(BG_WHITE | BLACK);
-	print("digital signature \n\
-A SaaS Service with internal servers, \n\
-no loadbalancing, no scripts, root on \n\
-servers, no HA...\n\
-My work was to build things around that\n\
-to insure a quality service.\n");
+	print("Engineering student \n\
+     \n\
+Hello World! \n\
+Homework\n\
+another line\n\
+just changing more lines\n");
 	chg_color(BG_GRAY | BLACK);
-	print ("Java - bash - tomcat - Mysql - Apache");
+	print ("Java - bash - Mauricio - Mysql - Apache");
 
 	locate(40,9);
 	chg_color(BG_RED | WHITE);
